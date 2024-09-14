@@ -80,7 +80,15 @@ async function run() {
         }
         const result = await bookCollections.find(query).toArray();
         res.send(result);
-    }); 
+    });
+    
+    // to get single book data
+    app.get("/book/:id", async(req, res) => {
+      const id = req.params.id;
+      const filter = { _id: new ObjectId(id)};
+      const result = await bookCollections.findOne(filter);
+      res.send(result);
+    });
 
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });

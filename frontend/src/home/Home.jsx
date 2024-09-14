@@ -1,11 +1,15 @@
 import React from 'react';
+import Banner from '../components/Banner.jsx';
+import BestSellerBooks from './FavoriteBooks.jsx';
 
-const home = () => {
+
+const Home = () => {
   return (
     <div>
-      Home
+      <Banner />
+      <BestSellerBooks />
     </div>
   );
 };
 
-export default home;
+export default Home;

@@ -37,8 +37,8 @@ const Navbar = () => {
     ];
 
     return (
-        <header>
-            <nav className={isSticky ? 'sticky top-0 bg-white shadow-md' : ''}>
+        <header className='w-full bg-transparent fixed top-0 left-0 right-0 transition-all ease-in duration-300'>
+            <nav className={`py-4 lg:px-24 px-4 ${isSticky ? 'sticky top-0 left-0 right-0 bg-blue-300' : ''}`}>
                 <div className="flex items-center justify-between px-4 py-2">
                     {/* Logo */}
                     <Link to="/" className='text-2xl font-bold text-blue-700 flex items-center gap-2'>
